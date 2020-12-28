@@ -22,10 +22,9 @@ const tbody = document.querySelector(".tbody");
   const ul = await driver.findElement(By.css(".main_prodlist .product_list"));
   const li = await ul.findElements(By.css(".prod_item"));
 
-  await li.map((element) => {
-    let title = element.findElement(By.name("productName"));
-    let price = element.findElement(By.css(".price_sect a"));
-    data.push({ title: title.getText(), price: price.getText() });
-    console.log(title.getText(), price.getText());
+  await li.map(async (element) => {
+    let title = await (await element.findElement(By.name("productName"))).getText();
+    let price = await (await element.findElement(By.css(".price_sect a"))).getText();
+    console.log(title, price);
   });
 })();
