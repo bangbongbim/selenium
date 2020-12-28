@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 720px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+#table{
+    width: 100%
+}
+
+.thead th{
+    width: 50%;
+}
+.tbody th td{
+    text-align: center;
+}
